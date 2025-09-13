@@ -2,10 +2,11 @@ package testplans.authentication.login;
 
 import framework.application.handlers.LoginHandler;
 import framework.utils.ExcelUtil;
-import pretest.BaseTest;
 import resources.handler.ScreenshotUtil;
 
 import org.junit.jupiter.api.Test;
+
+import base.BaseTest;
 
 import java.io.IOException;
 import java.util.Map;

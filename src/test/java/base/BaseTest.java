@@ -1,4 +1,4 @@
-package pretest;
+package base;
 import com.microsoft.playwright.*;
 
 import framework.application.handlers.LoginHandler;
