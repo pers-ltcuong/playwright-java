@@ -1,0 +1,42 @@
+# Revision History:
+
+* - 0.1
+  - Owner: Cuong Le
+  - Change reason: Initial class for Login feature
+  - Date: 2025-09-13
+* - 0.2
+  - Owner: Cuong Le
+  - Change reason: Update Chapter 1 – Test Strategy
+  - Date: 2025-09-14
+* - 0.3
+  - Owner: Cuong Le
+  - Change reason: Add 2 test cases testValidLogin, testValidLoginWithSpecialCharacters cover valid login
+  - Date: 2025-09-15
+* - 0.4
+  - Owner: Cuong Le
+  - Change reason: Update test case names in 1.8
+  - Date: 2025-09-16
+* - 0.5
+  - Owner: Cuong Le
+  - Change reason: Add screenshot strategy in test approach
+  - Date: 2025-09-17
+* - 0.6
+  - Owner: Cuong Le
+  - Change reason: Add System Considerations section
+  - Date: 2025-09-18
+* - 0.7
+  - Owner: Cuong Le
+  - Change reason: Change test procedure of testInvalidLoginWithEmptyUsername
+  - Date: 2025-09-19
+* - 0.8
+  - Owner: Cuong Le
+  - Change reason: Update test case example details
+  - Date: 2025-09-20
+* - 0.9
+  - Owner: Cuong Le
+  - Change reason: Revise Items Not to Be Tested section
+  - Date: 2025-09-21
+* - 1.0
+  - Owner: Cuong Le
+  - Change reason: Final review and consolidation
+  - Date: 2025-09-22
