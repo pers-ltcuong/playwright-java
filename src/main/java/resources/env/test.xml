@@ -3,4 +3,5 @@
     <username>testuser</username>
     <password>Test@123</password>
     <headless>true</headless>
+    <os>Windows</os>
 </config>

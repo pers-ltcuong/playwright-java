@@ -47,16 +47,16 @@ public class LoginTestSuite extends BaseTest {
             if (!"valid".equalsIgnoreCase(type)) continue; // Skip non-valid users
             String username = userData.get("username");
             String password = userData.get("password");
-            Allure.step("Testing login for user: " + username);
 
-            Allure.step("Enter username: " + username, () -> {
-                  Allure.step("Entered username: " + username);
-            });
+            Allure.step("Testing login for user: " + username, () -> {
+                Allure.step("Enter username: " + username, () -> {
+                    Allure.step("Entered username: " + username);
+                });
 
-            Allure.step("Enter password: " + password, () -> {
-                  Allure.step("Entered password: " + password);
+                Allure.step("Enter password: " + password, () -> {
+                    Allure.step("Entered password: " + password);
+                });
             });
-            
 
             // loginHandler.enterUsername(username);
             // loginHandler.enterPassword(password);
