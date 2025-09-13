@@ -5,8 +5,9 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
+import io.qameta.allure.Allure;
 
-public class AllureEnvUtil {
+public class AllureUtil {
 
     private static final String ENV_FILE = "target/allure-results/environment.properties";
 
@@ -48,5 +49,15 @@ public class AllureEnvUtil {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void writeParameter(String name, String value) {
+        Allure.parameter(name, value);
+    }
+
+    public static void testCaseInfo(String creator, String reviewer, String date) {
+        writeParameter("Testcase creator", creator);
+        writeParameter("Peer reviewer", reviewer);
+        writeParameter("Date creation", date);
     }
 }

@@ -2,7 +2,7 @@ package base;
 import com.microsoft.playwright.*;
 
 import framework.application.handlers.LoginHandler;
-import framework.utils.AllureEnvUtil;
+import framework.utils.AllureUtil;
 import framework.utils.ConfigReader;
 import framework.utils.SelectorUtil;
 import resources.handler.ScreenshotUtil;
@@ -34,9 +34,9 @@ public class BaseTest {
         String browserType = config.getValue("browser") != null ? config.getValue("browser") : "chromium";
 
         // Write Allure environment properties
-        AllureEnvUtil.writeEnvironment(config);
-        AllureEnvUtil.writeEnvironment("Browser", browserType);
-        AllureEnvUtil.writeEnvironment("Headless", String.valueOf(headless));
+        AllureUtil.writeEnvironment(config);
+        AllureUtil.writeEnvironment("Browser", browserType);
+        AllureUtil.writeEnvironment("Headless", String.valueOf(headless));
 
         // Initialize Playwright and browser
         playwright = Playwright.create();

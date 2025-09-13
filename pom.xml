@@ -32,7 +32,6 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-junit5</artifactId>
             <version>2.29.0</version>
-            <scope>test</scope>
         </dependency>
 
         <!-- Core Allure annotations (needed for @Attachment, @Step, etc.) -->
@@ -40,7 +39,6 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-java-commons</artifactId>
             <version>2.29.0</version>
-            <scope>test</scope>
         </dependency>
 
         <!-- Apache POI (Excel) -->
