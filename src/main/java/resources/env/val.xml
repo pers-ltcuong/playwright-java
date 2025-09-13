@@ -1,0 +1,6 @@
+<config>
+    <baseUrl>https://val.example.com</baseUrl>
+    <username>valuser</username>
+    <password>Val@123</password>
+    <headless>false</headless>
+</config>

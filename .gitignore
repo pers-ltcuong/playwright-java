@@ -1,0 +1,18 @@
+# Maven target folder
+/target/
+
+# Allure results
+/allure-results/
+.allure
+
+# IDE files
+*.iml
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Playwright browsers
+/playwright/.local-browsers/

@@ -1,0 +1,6 @@
+<config>
+    <baseUrl>https://example.com/login</baseUrl>
+    <username>testuser</username>
+    <password>Test@123</password>
+    <headless>true</headless>
+</config>
