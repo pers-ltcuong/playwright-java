@@ -5,8 +5,6 @@ The Login feature allows users to access the application using valid credentials
 
 This test strategy defines the objectives, approach, and scope of testing for the Login feature to ensure it functions correctly under various conditions.
 
----
-
 ## 1.2 Objective
 The objective of testing the Login feature is to:
 
@@ -15,21 +13,19 @@ The objective of testing the Login feature is to:
 - Confirm consistent behavior across supported browsers and devices.
 - Provide traceability and evidence of test results using screenshots and reports.
 
----
-
 ## 1.3 Test Approach
 The testing approach includes:
 
 1. **Functional Testing:** Validate all functional requirements of the Login feature.
 2. **Positive and Negative Testing:**  
+
    - Positive: Login with valid credentials.  
    - Negative: Invalid username, invalid password, empty fields, and security checks.
+
 3. **UI Verification:** Confirm all input fields, buttons, and messages display correctly.
 4. **Automation Testing:** Implement automated test cases using Playwright with JUnit 5.
 5. **Reporting:** Use Allure to generate test reports with screenshots for failed and passed steps.
 6. **Regression Testing:** Ensure Login continues to function after system updates.
-
----
 
 ## 1.4 System Considerations
 - Supported browsers: Chrome, Firefox, Edge (latest versions)  
@@ -37,14 +33,10 @@ The testing approach includes:
 - Network requirement: Stable internet connection for backend API calls  
 - Security: Passwords must be encrypted; login attempts rate-limited
 
----
-
 ## 1.5 Items Not to Be Tested
 - Third-party authentication (OAuth via Google, Facebook, etc.)  
 - Backend database validation (covered by API/unit tests)  
 - Performance and load testing (handled separately)
-
----
 
 ## 1.6 Abbreviations
 | Abbreviation | Description |
@@ -55,16 +47,14 @@ The testing approach includes:
 | JWT          | JSON Web Token |
 | UX           | User Experience |
 
----
-
 ## 1.7 Reference
-1. System Requirement Specification (SRS) – Authentication Module - Mohamed, v1.0, https://example.confluence.com/Software/LZ1112/SRS/Login-user-requirement-specification-(SRS)
+1. System Requirement Specification (SRS) – Authentication Module - Mohamed, v1.0, https://example.confluence.com/Software/LZ1112/SRS/Login-user-requirement-specification-(SRS) 
 2. Login test strategy - Cuong Le, v1.2, https://example.confluence.com/Quality-Aussrance/LZ1112/Test-strategy/Login-test-strategy
 
 ## 1.8 Test case naming convention
 Example: LOGIN_VALID_SPEC_CHAR_01
 
 Where:
- - LOGIN: Feature name
- - VALID: Functional test for LOGIN feature
- - 01: Test case ID
+- **LOGIN**: Feature name  
+- **VALID**: Functional test for LOGIN feature  
+- **01**: Test case ID

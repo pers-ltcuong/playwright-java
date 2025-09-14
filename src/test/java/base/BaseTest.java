@@ -4,6 +4,7 @@ import com.microsoft.playwright.*;
 import framework.application.handlers.LoginHandler;
 import framework.utils.AllureUtil;
 import framework.utils.ConfigReader;
+import framework.utils.MdToPdfUtil;
 import framework.utils.ScreenshotUtil;
 import framework.utils.SelectorUtil;
 
@@ -68,6 +69,15 @@ public class BaseTest {
             loginHandler.enterUsername(config.getValue("username"));
             loginHandler.enterPassword(config.getValue("password"));
             loginHandler.clickLoginButton();
+        }
+
+        // Create documents from Markdown files
+        MdToPdfUtil mdToPdfUtil = new MdToPdfUtil();
+        try {
+            mdToPdfUtil.mergeMarkdownToPdf(this.getClass(), null, null);
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.err.println("Failed to generate PDF from Markdown.");
         }
     }
 
