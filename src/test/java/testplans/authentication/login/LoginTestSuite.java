@@ -12,7 +12,7 @@ import base.BaseTest;
 import java.io.IOException;
 import java.util.Map;
 
-import org.junit.jupiter.api.Assertions;
+// import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 
 import io.qameta.allure.*;
@@ -54,7 +54,7 @@ public class LoginTestSuite extends BaseTest {
 
         // Implement test for valid login;
         this.setupUsers();
-        LoginHandler loginHandler = new LoginHandler(page);
+        // LoginHandler loginHandler = new LoginHandler(page);
         for (Map.Entry<String, Map<String, String>> entry : users.entrySet()) {
             Map<String, String> userData = entry.getValue();
             String type = userData.get("type");
