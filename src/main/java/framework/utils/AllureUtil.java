@@ -52,7 +52,7 @@ public class AllureUtil {
     }
 
     public static void writeParameter(String name, String value) {
-        Allure.parameter(name, value);
+        Allure.label(name, value);
     }
 
     public static void testCaseInfo(String creator, String reviewer, String date) {

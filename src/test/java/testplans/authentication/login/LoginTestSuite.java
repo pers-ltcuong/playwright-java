@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 
 import io.qameta.allure.*;
 
@@ -34,6 +35,7 @@ public class LoginTestSuite extends BaseTest {
     }
 
     @Test
+    @DisplayName("LOGIN_VALID_01")
     @Story("Valid Login")
     @Severity(SeverityLevel.CRITICAL)
     @Description("User logs in with valid credentials\n" +
@@ -53,7 +55,6 @@ public class LoginTestSuite extends BaseTest {
         // Implement test for valid login;
         this.setupUsers();
         LoginHandler loginHandler = new LoginHandler(page);
-        ScreenshotUtil.captureScreenshot(page);
         for (Map.Entry<String, Map<String, String>> entry : users.entrySet()) {
             Map<String, String> userData = entry.getValue();
             String type = userData.get("type");
@@ -64,11 +65,15 @@ public class LoginTestSuite extends BaseTest {
             Allure.step("Testing login for user: " + username, () -> {
                 Allure.step("Enter username: " + username, () -> {
                     Allure.step("Entered username: " + username);
+                    ScreenshotUtil.captureScreenshot(page);
                 });
+                
 
                 Allure.step("Enter password: " + password, () -> {
                     Allure.step("Entered password: " + password);
+                    ScreenshotUtil.captureScreenshot(page);
                 });
+                
             });
 
             // loginHandler.enterUsername(username);
@@ -82,6 +87,7 @@ public class LoginTestSuite extends BaseTest {
     }
 
     @Test
+    @DisplayName("LOGIN_VALID_SPEC_CHAR_01")
     @Story("Valid Login")
     @Severity(SeverityLevel.CRITICAL)
     @Description("User logs in with valid credentials containing special characters\n" +
@@ -101,6 +107,7 @@ public class LoginTestSuite extends BaseTest {
     }
 
     @Test
+    @DisplayName("LOGIN_INVALID_01")
     @Story("Invalid Login")
     @Severity(SeverityLevel.NORMAL)
     @Description("User attempts to log in with valid username and wrong password\n" +
@@ -119,6 +126,7 @@ public class LoginTestSuite extends BaseTest {
     }
 
     @Test
+    @DisplayName("LOGIN_INVALID_EMPTY_USR_01")
     @Story("Invalid Login")
     @Severity(SeverityLevel.NORMAL)
     @Description("User attempts to log in with empty username and valid password")
@@ -129,6 +137,7 @@ public class LoginTestSuite extends BaseTest {
     }
 
     @Test
+    @DisplayName("LOGIN_INVALID_EMPTY_PWD_01")
     @Story("Invalid Login")
     @Severity(SeverityLevel.NORMAL)
     @Description("User attempts to log in with valid username and empty password")
@@ -139,6 +148,7 @@ public class LoginTestSuite extends BaseTest {
     }
 
     @Test
+    @DisplayName("LOGIN_INVALID_EMPTY_FIELDS_01")
     @Story("Invalid Login")
     @Severity(SeverityLevel.NORMAL)
     @Description("User attempts to log in with both username and password fields empty")
@@ -149,6 +159,7 @@ public class LoginTestSuite extends BaseTest {
     }
 
     @Test
+    @DisplayName("LOGIN_INVALID_NON_EXISTENT_USER_01")
     @Story("Invalid Login")
     @Severity(SeverityLevel.NORMAL)
     @Description("User attempts to log in with non-existent username and any password")
@@ -159,6 +170,7 @@ public class LoginTestSuite extends BaseTest {
     }
 
     @Test
+    @DisplayName("LOGIN_VALID_REMEMBER_ME_01")
     @Story("Login Features")
     @Severity(SeverityLevel.MINOR)
     @Description("User tests 'Remember Me' functionality during login")
@@ -169,6 +181,10 @@ public class LoginTestSuite extends BaseTest {
     }
 
     @Test
+    @DisplayName("LOGIN_VALID_PASSWORD_01")
+    @Story("Login Features")
+    @Severity(SeverityLevel.MINOR)
+    @Description("User tests password visibility toggle and strength indicator")
     public void testPasswordFunctionality() {
         AllureUtil.testCaseInfo("Alice", "Bob", "2024-10-01");
         Allure.step("Testing password visibility toggle and strength indicator");
@@ -176,6 +192,10 @@ public class LoginTestSuite extends BaseTest {
     }
 
     @Test
+    @DisplayName("LOGIN_INVALID_LOCKOUT_01")
+    @Story("Security Features")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("User tests account lockout after multiple failed login attempts")
     public void testMultipleFailedLoginAttempts() {
         AllureUtil.testCaseInfo("Alice", "Bob", "2024-10-01");
         Allure.step("Testing account lockout after multiple failed login attempts");
@@ -183,6 +203,10 @@ public class LoginTestSuite extends BaseTest {
     }
 
     @Test
+    @DisplayName("LOGIN_VALID_FORGOT_PWD_01")
+    @Story("Login Features")
+    @Severity(SeverityLevel.MINOR)
+    @Description("User tests 'Forgot Password' functionality")
     public void testForgotPassword() {
         AllureUtil.testCaseInfo("Alice", "Bob", "2024-10-01");
         Allure.step("Testing 'Forgot Password' functionality");
@@ -190,6 +214,10 @@ public class LoginTestSuite extends BaseTest {
     }
 
     @Test
+    @DisplayName("LOGIN_VALID_CHANGE_PWD_01")
+    @Story("Login Features")
+    @Severity(SeverityLevel.MINOR)
+    @Description("User tests changing unexpired and expired passwords")
     public void testChangeUnexpiredPassword() {
         AllureUtil.testCaseInfo("Alice", "Bob", "2024-10-01");
         Allure.step("Testing changing unexpired password functionality");
@@ -197,6 +225,10 @@ public class LoginTestSuite extends BaseTest {
     }
 
     @Test
+    @DisplayName("LOGIN_VALID_CHANGE_EXPIRED_PWD_01")
+    @Story("Login Features")
+    @Severity(SeverityLevel.MINOR)
+    @Description("User tests changing expired passwords")
     public void testChangeExpiredPassword() {
         AllureUtil.testCaseInfo("Alice", "Bob", "2024-10-01");
         Allure.step("Testing changing expired password functionality");
