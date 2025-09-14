@@ -3,7 +3,7 @@ package testplans.authentication.login;
 import framework.application.handlers.LoginHandler;
 import framework.utils.AllureUtil;
 import framework.utils.ExcelUtil;
-import resources.handler.ScreenshotUtil;
+import framework.utils.ScreenshotUtil;
 
 import org.junit.jupiter.api.Test;
 

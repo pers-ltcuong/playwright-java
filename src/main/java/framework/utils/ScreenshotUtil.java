@@ -1,4 +1,4 @@
-package resources.handler;
+package framework.utils;
 
 import com.microsoft.playwright.Page;
 import io.qameta.allure.Allure;
@@ -32,7 +32,7 @@ public class ScreenshotUtil {
         int current = counter.get() + 1;
         counter.set(current);
 
-        String name = testName.get() + "SS" + current + ".png";
+        String name = testName.get() + "_SS" + current + ".png";
 
         // Take screenshot
         byte[] bytes = takeScreenshot(page);

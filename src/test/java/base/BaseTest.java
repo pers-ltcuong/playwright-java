@@ -4,8 +4,8 @@ import com.microsoft.playwright.*;
 import framework.application.handlers.LoginHandler;
 import framework.utils.AllureUtil;
 import framework.utils.ConfigReader;
+import framework.utils.ScreenshotUtil;
 import framework.utils.SelectorUtil;
-import resources.handler.ScreenshotUtil;
 
 import java.util.Map;
 
