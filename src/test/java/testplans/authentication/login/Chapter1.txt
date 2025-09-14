@@ -60,3 +60,11 @@ The testing approach includes:
 ## 1.7 Reference
 1. System Requirement Specification (SRS) – Authentication Module - Mohamed, v1.0, https://example.confluence.com/Software/LZ1112/SRS/Login-user-requirement-specification-(SRS)
 2. Login test strategy - Cuong Le, v1.2, https://example.confluence.com/Quality-Aussrance/LZ1112/Test-strategy/Login-test-strategy
+
+## 1.8 Test case naming convention
+Example: LOGIN_VALID_SPEC_CHAR_01
+
+Where:
+ - LOGIN: Feature name
+ - VALID: Functional test for LOGIN feature
+ - 01: Test case ID
