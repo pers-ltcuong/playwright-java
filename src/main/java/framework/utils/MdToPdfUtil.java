@@ -60,12 +60,12 @@ public class MdToPdfUtil {
 
         StringBuilder combinedHtml = new StringBuilder("<html><head>")
                 .append("<style>")
-                .append("body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; }")
+                .append("body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.4; }")
                 .append("h1, h2, h3, h4 { font-weight: 600; margin-top: 24px; }")
                 .append("pre, code { background-color: #f6f8fa; padding: 4px; border-radius: 4px; }")
                 .append("table { border-collapse: collapse; width: 100%; margin: 16px 0; }")
-                .append("th, td { border: 1px solid #dfe2e5; padding: 6px 13px; }")
-                .append("th { background-color: #f2f2f2; font-weight: 600; }")
+                .append("th, td { border: 1px solid #dfe2e5; padding: 6px 13px; font-size: 13px; }")
+                .append("th { background-color: #f2f2f2; font-weight: 600; font-size: 13px; }")
                 .append("ul.task-list { list-style: none; }")
                 .append("</style></head><body>");
 
